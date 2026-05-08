@@ -2,255 +2,672 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description"
-        content="Portfolio of Abhishek Kumar, showcasing full-stack projects, skills, and contact information.">
-    <title>Abhishek Kumar | Full-Stack Portfolio</title>
-    <!-- Google Fonts + Font Awesome -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Kumar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Swapped to warmer, modern sans-serif fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle" id="themeToggle" aria-label="Switch dark/light mode">
-        <i class="fas fa-moon"></i>
+  <!-- ── CURSOR ───────────────────────────────────────────── -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ── GRAIN ────────────────────────────────────────────── -->
+  <div id="grain"></div>
+
+  <!-- ─────────────────────────────────────────────────────────
+     HEADER
+──────────────────────────────────────────────────────────── -->
+  <header id="header">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">&lt;/&gt;</div>
+        BuildWithAbhi
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#timeline">Journey</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#contact" class="btn-outline">Say Hello</a>
+        <a href="#projects" class="btn-primary">View Work ↗</a>
+      </div>
+      <button id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#timeline" class="mobile-link">Journey</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- ─────────────────────────────────────────────────────────
+     HERO
+──────────────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="orb hero-orb-1"></div>
+    <div class="orb hero-orb-2"></div>
+    <div class="orb hero-orb-3"></div>
+
+    <div class="container">
+      <div class="hero-grid-layout">
+
+        <!-- Text Content (Left Side) -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <div class="dot"></div>
+            <span>Software Engineer — Building the Future</span>
+          </div>
+
+          <h1 class="hero-title">
+            Building Software<br>
+            <span class="line2">That Thinks & Feels.</span>
+          </h1>
+
+          <p class="hero-sub">
+            I'm <strong>Abhishek Kumar</strong>, a first-year ICT student at
+            <strong>Gautam Buddha University</strong> focused on building AI-driven web applications, voice agents, and
+            smart digital experiences.
+            I enjoy transforming ambitious ideas into real-world projects through code, creativity, and innovation.
+            Outside tech, I’m into chess, fitness, and exploring new places.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-hero-primary">
+              <span>Explore Projects</span>
+              <span>→</span>
+            </a>
+            <a href="#contact" class="btn-hero-secondary">
+              <span>💬</span>
+              <span>Let's Talk</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="stat-item">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Curiosity Level</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image & Badges (Right Side) -->
+        <div class="hero-image-container reveal">
+          <div class="hero-image-glow"></div>
+
+          <!-- Replace the src below with your actual image URL -->
+          <div class="hero-image-wrapper">
+            <div class="hero-image-inner">
+              <img src="images/profile_pic.png" alt="Abhishek Kumar" />
+              <div class="hero-image-overlay"></div>
+            </div>
+          </div>
+
+          <!-- Floating tech badges orbiting the image -->
+          <div class="float-badges">
+            <div class="float-badge badge-1">
+              <div class="badge-icon" style="background:rgba(59,130,246,.15)">🐍</div>
+              <span>Python</span>
+            </div>
+            <div class="float-badge badge-2">
+              <div class="badge-icon" style="background:rgba(56, 189, 248, 0.15)">♨️</div>
+              <span>Java</span>
+            </div>
+            <div class="float-badge badge-3">
+              <div class="badge-icon" style="background:rgba(52,211,153,.15)">🤖</div>
+              <span>Local LLMs</span>
+            </div>
+            <div class="float-badge badge-4">
+              <div class="badge-icon" style="background:rgba(244,114,182,.15)">🗄️</div>
+              <span>MySQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- NAVIGATION -->
-    <header>
-        <div class="container navbar">
-            <div class="logo">
-                <a href="#">AK</a>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
+  </section>
 
-    <main>
-        <!-- HOME Section -->
-        <section id="home" class="home-section">
-            <div class="container home-content">
-                <div class="avatar">
-                    <img src="images/profile.png" alt="Abhishek Kumar">
-                </div>
-                <h1>Abhishek Kumar <span class="highlight">✦</span></h1>
-                <div class="tagline">
-                    I'm a <span class="typed-text" id="typed"></span>
-                </div>
-                <p class="intro-text">Solving Real-World Problems with Innovative Solutions using Java and Python and basic Web-Dev. Let's create something impactful.</p>
-                <div class="btn-group">
-                    <a href="#projects" class="btn btn-primary"><i class="fas fa-arrow-down"></i> View Work</a>
-                    <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Contact Me</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT Section -->
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>I'm <strong>Abhishek Kumar</strong>, a B.Tech Computer Science student with a strong
-                            interest in software development and problem solving. I enjoy turning ideas into practical,
-                            user-friendly applications.</p>
-                        <p>I work mainly with the <strong>Java</strong> & <strong>Python</strong>, along with basic Web-Dev using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>. I like building projects that solve real-world problems and improve
-                            everyday workflows.
-                        </p>
-                        <p>Right now, I’m focused on building projects like a <strong>Virtual AI Assistant</strong>
-                            that helps users with daily tasks and provides personalized assistance.</p>
-                        <ul class="info-list">
-                            <li><i class="fas fa-graduation-cap"></i> <strong>Education:</strong> B.Tech in Computer
-                                Science</li>
-                            <li><i class="fas fa-code"></i> <strong>Experience:</strong> Project-based learning &
-                                self-initiated development</li>
-                            <li><i class="fas fa-globe"></i> <strong>Focus:</strong> Full-Stack Development & Problem
-                                Solving</li>
-                        </ul>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">Projects Built</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">2+</div>
-                            <div class="stat-label">Years Learning</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">∞</div>
-                            <div class="stat-label">Curiosity Level</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS Section (VERY IMPORTANT) -->
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project 1 - MERN -->
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fab fa-react"></i></div>
-                        <h3>LineSaathi</h3>
-                        <p>Smart queue management system for college mess that helps predict crowd levels and suggests
-                            the best time to visit.</p>
-                        <div class="project-tech">
-                            <span>C++</span><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/abhishekkumar-code30/LineSaathi" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                    <!-- Project 2 - Python -->
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fab fa-python"></i></div>
-                        <h3>NOVA - AI Virtual Assistant</h3>
-                        <p>AI-powered virtual assistant built to handle queries and automate tasks using Python and
-                            intelligent workflows.</p>
-                        <div class="project-tech">
-                            <span>Python</span><span>AI</span><span>APIs</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                    <!-- Project 3 - Java -->
-                    <div class="project-card">
-                        <div class="project-icon"><i class="fab fa-python"></i></div>
-                        <h3>Image Generator</h3>
-                        <p>Python based image generation application with intuitive UI and efficient processing capabilities and stores user data upon logging and registration.</p>
-                        <div class="project-tech">
-                            <span>Python</span><span>PHP</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SKILLS Section -->
-        <section id="skills">
-            <div class="container">
-                <h2 class="section-title">Tech Stack & Skills</h2>
-                <div class="skills-wrapper">
-                    <div class="skills-chips">
-                        <div class="skill-chip"><i class="fab fa-python"></i> Python</div>
-                        <div class="skill-chip"><i class="fab fa-java"></i> Java</div>
-                        <div class="skill-chip"><i class="fab fa-js"></i> JavaScript/TS</div>
-                        <div class="skill-chip"><i class="fab fa-node"></i> Node.js</div>
-                        <div class="skill-chip"><i class="fab fa-git-alt"></i> Git/GitHub</div>
-                        <div class="skill-chip"><i class="fas fa-database"></i> MySQL</div>
-                    </div>
-                    <div class="skill-bars">
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Java / Spring Boot</span><span>90%</span></div>
-                            <div class="bar-track">
-                                <div class="bar-fill" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Python / FastAPI</span><span>85%</span></div>
-                            <div class="bar-track">
-                                <div class="bar-fill" data-width="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>JavaScript / Node.js</span><span>80%</span></div>
-                            <div class="bar-track">
-                                <div class="bar-fill" data-width="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-item">
-                            <div class="skill-info"><span>Git & GitHub</span><span>88%</span></div>
-                            <div class="bar-track">
-                                <div class="bar-fill" data-width="88"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT Section -->
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="contact-wrapper">
-                    <div class="contact-cards">
-                        <div class="contact-card">
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekkrmay30@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                            <h4>Email</h4>
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekkrmay30@gmail.com">abhishekkrmay30@gmail.com</a>
-                            <button class="copy-btn" id="copyEmailBtn"><i class="far fa-copy"></i> Copy</button>
-                        </div>
-                        <div class="contact-card">
-                            <a href="https://www.linkedin.com/in/abhishek-kumar-30may2007/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <h4>LinkedIn</h4>
-                            <a href="https://www.linkedin.com/in/abhishek-kumar-30may2007/"
-                                target="_blank">linkedin.com/in/abhishek-kumar-30may2007/</a>
-                        </div>
-                        <div class="contact-card">
-                            <a href="https://github.com/abhishekkumar-code30" target="_blank"><i class="fab fa-github"></i></a>
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/abhishekkumar-code30" target="_blank">github.com/abhishekkumar-code30</a>
-                        </div>
-                    </div>
-                    <!-- Contact Form (optional but nice) -->
-                    <div class="contact-form">
-                        <h3>Send a message</h3>
-                        <form id="demoForm">
-                            <input type="text" id="formName" placeholder="Your name" required>
-                            <input type="email" id="formEmail" placeholder="Your email" required>
-                            <textarea id="formMsg" rows="4" placeholder="Your message..."></textarea>
-                            <button type="submit" class="btn btn-primary">Send <i
-                                    class="fas fa-paper-plane"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container footer-content">
-            <p>© 2026 Abhishek Kumar — Built with <i class="fas fa-heart"></i> and modern web technologies</p>
-            <div class="footer-social">
-                <a href="https://github.com/abhishekkumar-code30" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/abhishek-kumar-30may2007/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekkrmay30@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <div class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
+  <!-- ─────────────────────────────────────────────────────────
+     TICKER
+──────────────────────────────────────────────────────────── -->
+  <div class="ticker-section">
+    <div class="ticker-track" id="ticker">
+      <!-- items inserted by JS -->
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- ─────────────────────────────────────────────────────────
+     ABOUT
+──────────────────────────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Visual column -->
+        <div class="about-visual reveal">
+          <div class="about-card-main glass-card">
+            <div class="code-block">
+              <span class="code-line code-comment">// about_me.json</span>
+              <span class="code-line">{</span>
+              <span class="code-line"> <span class="code-prop">"name"</span>: <span class="code-string">"Abhishek
+                  Kumar"</span>,</span>
+              <span class="code-line"> <span class="code-prop">"role"</span>: <span class="code-string">"Software
+                  Engineer"</span>,</span>
+              <span class="code-line"> <span class="code-prop">"degree"</span>: <span class="code-string">"B.Tech
+                  ICT"</span>,</span>
+              <span class="code-line"> <span class="code-prop">"university"</span>: <span class="code-string">"Gautam
+                  Buddha University"</span>,</span>
+              <span class="code-line"> <span class="code-prop">"location"</span>: <span class="code-string">"Greater
+                  Noida / Dhanbad"</span>,</span>
+              <span class="code-line"> <span class="code-prop">"hobbies"</span>: [</span>
+              <span class="code-line"> <span class="code-string">"Chess"</span>,</span>
+              <span class="code-line"> <span class="code-string">"Badminton"</span>,</span>
+              <span class="code-line"> <span class="code-string">"Football"</span></span>
+              <span class="code-line"> ],</span>
+              <span class="code-line"> <span class="code-prop">"status"</span>: <span
+                  class="code-keyword">"Building"</span><span class="code-cursor"></span></span>
+              <span class="code-line">}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content column -->
+        <div class="about-content reveal" style="transition-delay:.15s">
+          <div class="tag">About Me</div>
+          <h2 class="section-title" style="margin-bottom:24px">
+            Engineering ideas<br>
+            <span class="gradient-text">into reality.</span>
+          </h2>
+
+          <p class="about-desc">
+            I'm a first-year student in the School of ICT at Gautam Buddha University. I attended DAV Public School in
+            Dhanbad, Jharkhand from nursery through 12th grade, which laid the foundation for my love of logic and
+            systems.
+          </p>
+          <p class="about-desc">
+            “I’m deeply interested in building technology that feels practical, intelligent, and impactful. From
+            experimenting with AI integrations to developing modern web applications and smart systems, I enjoy turning
+            ideas into real projects. I love exploring new technologies, solving challenging problems, and continuously
+            pushing myself to learn beyond the classroom.
+          </p>
+
+          <div class="about-highlights">
+            <div class="about-highlight-row">
+              <div class="ahr-icon" style="background:rgba(56, 189, 248, 0.1)">🎓</div>
+              <div class="ahr-text">
+                <strong>B.Tech Computer Science Engineering</strong>
+                Gautam Buddha University, Greater Noida
+              </div>
+            </div>
+            <div class="about-highlight-row">
+              <div class="ahr-icon" style="background:rgba(52, 211, 153, 0.1)">🏫</div>
+              <div class="ahr-text">
+                <strong>DAV Public School, Koyla Nagar</strong>
+                Dhanbad, Jharkhand (Nursery - 12th Grade)
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+     SKILLS
+──────────────────────────────────────────────────────────── -->
+  <section id="skills">
+    <div class="container">
+      <div class="skills-header reveal">
+        <div class="tag">Technical Arsenal</div>
+        <h2 class="section-title" style="margin-top:20px">
+          Tools I wield<br>
+          <span class="gradient-text">with precision.</span>
+        </h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon" style="background:rgba(59,130,246,.12)">💻</div>
+            <div class="skill-cat-name">Languages</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">C</span>
+            <span class="skill-pill">HTML/CSS</span>
+            <span class="skill-pill">JavaScript</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Java</span><span>75%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--pct:75%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Python</span><span>70%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--pct:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal" style="transition-delay:.1s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon" style="background:rgba(56, 189, 248, 0.12)">📚</div>
+            <div class="skill-cat-name">Libraries and frameworks</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">MatPlotLib</span>
+            <span class="skill-pill">JDBC</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>NumPy</span><span>85%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--pct:85%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>JDBC</span><span>70%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--pct:70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal" style="transition-delay:.2s">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon" style="background:rgba(129, 140, 248, 0.12)">⚙️</div>
+            <div class="skill-cat-name">Tools</div>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-pill">Ollama</span>
+            <span class="skill-pill">Git & GitHub</span>
+            <span class="skill-pill">Edge-TTS</span>
+            <span class="skill-pill">gTTS / Piper</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Local AI & LLMs</span><span>80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--pct:80%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Git & GitHub</span><span>85%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="--pct:85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+     PROJECTS (BENTO BOX)
+──────────────────────────────────────────────────────────── -->
+  <section id="projects">
+    <div class="container">
+      <div class="projects-header reveal">
+        <div>
+          <div class="tag" style="margin-bottom:16px">Featured Work</div>
+          <h2 class="section-title">
+            Things I've<br>
+            <span class="gradient-text">shipped.</span>
+          </h2>
+        </div>
+        <a href="https://github.com/abhishekkumar-code30" target="_blank" class="btn-outline">
+          All Projects ↗
+        </a>
+      </div>
+
+      <div class="bento-grid">
+
+        <!-- Card 1 — LineSaathi (featured large) -->
+        <div class="proj-card reveal">
+          <div class="proj-visual">
+            <div class="proj-visual-glow"></div>
+            <div class="proj-visual-bg">
+              <img src="./images/LineSaathi.jpg" alt="LineSaathi Interface">
+            </div>
+            <div class="proj-badge">Featured</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-type">Predictive · Smart System</div>
+            <div class="proj-name">LineSaathi</div>
+            <p class="proj-desc">
+              Smart queue management system for college mess that helps predict crowd levels and suggests the best time
+              to visit.
+            </p>
+            <div class="proj-footer">
+              <div class="proj-stack">
+                <span class="proj-stack-pill">C++</span>
+                <span class="proj-stack-pill">Python</span>
+                <span class="proj-stack-pill">HTML/CSS</span>
+                <span class="proj-stack-pill">JavaScript</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/abhishekkumar-code30/LineSaathi" class="proj-link" title="Code">Code</a>
+                <a href="https://github.com/abhishekkumar-code30/LineSaathi" class="proj-link" title="Demo">Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 — NOVA -->
+        <div class="proj-card reveal" style="transition-delay:.1s">
+          <div class="proj-visual"">
+            <div class=" proj-visual-glow">
+          </div>
+          <div class="proj-visual-bg">
+            <img src="./images/NovaAI.jpg" alt="NOVA Virtual Assistant">
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-type">Virtual Assistant · Automation</div>
+          <div class="proj-name">NOVA - AI Virtual Assistant</div>
+          <p class="proj-desc">
+            AI-powered virtual assistant built to handle queries and automate tasks using Python and intelligent
+            workflows.
+          </p>
+          <div class="proj-footer">
+            <div class="proj-stack">
+              <span class="proj-stack-pill">Python</span>
+              <span class="proj-stack-pill">AI</span>
+              <span class="proj-stack-pill">APIs</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-link" title="Code">Code</a>
+              <a href="#" class="proj-link" title="Demo">Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+     EXPERIENCE
+──────────────────────────────────────────────────────────── -->
+  <section id="experience">
+    <div class="container">
+      <div class="experience-header reveal">
+        <div class="tag" style="margin-bottom:16px">Experience & Achievements</div>
+        <h2 class="section-title">
+          Where I've<br>
+          <span class="gradient-text">made impact.</span>
+        </h2>
+      </div>
+
+      <div class="exp-grid">
+
+        <div class="exp-card reveal">
+          <div class="exp-top">
+            <div class="exp-org">
+              <div class="exp-logo" style="background:rgba(56, 189, 248, 0.1)">🏢</div>
+              <div>
+                <div class="exp-org-name">InAmigos Foundation</div>
+                <div class="exp-org-type">Tech Internship</div>
+              </div>
+            </div>
+            <div class="exp-period">May 2026 – Present</div>
+          </div>
+          <div class="exp-role">AI Web Development Intern</div>
+          <p class="exp-desc">
+            Developing modern web solutions integrating AI capabilities. Selected for this role via Internshala in early
+            May.
+          </p>
+          <div class="exp-skills">
+            <span class="exp-skill-tag">Web Dev</span>
+            <span class="exp-skill-tag">AI Integration</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal" style="transition-delay:.1s">
+          <div class="exp-top">
+            <div class="exp-org">
+              <div class="exp-logo" style="background:rgba(251, 191, 36, 0.1)">🌟</div>
+              <div>
+                <div class="exp-org-name">Google / Gemini</div>
+                <div class="exp-org-type">Ambassador Program</div>
+              </div>
+            </div>
+            <div class="exp-period">May 2026</div>
+          </div>
+          <div class="exp-role">Shortlisted Candidate</div>
+          <p class="exp-desc">
+            Shortlisted for the final interview round of the Gemini Student Ambassador Program 2026 based on technical
+            merit.
+          </p>
+          <div class="exp-skills">
+            <span class="exp-skill-tag">Gemini API</span>
+            <span class="exp-skill-tag">Advocacy</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal" style="transition-delay:.2s">
+          <div class="exp-top">
+            <div class="exp-org">
+              <div class="exp-logo" style="background:rgba(244, 114, 182, 0.1)">🏆</div>
+              <div>
+                <div class="exp-org-name">Smart India Hackathon</div>
+                <div class="exp-org-type">National Competition</div>
+              </div>
+            </div>
+            <div class="exp-period">First Semester</div>
+          </div>
+          <div class="exp-role">Participant</div>
+          <p class="exp-desc">
+            Stepped out of my comfort zone to participate in SIH during my first month of college. A highly valuable
+            public failure that taught me rapid prototyping and resilience.
+          </p>
+          <div class="exp-skills">
+            <span class="exp-skill-tag">Hackathon</span>
+            <span class="exp-skill-tag">Prototyping</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+     TIMELINE / ROADMAP
+──────────────────────────────────────────────────────────── -->
+  <section id="timeline">
+    <div class="orb contact-orb" style="background:radial-gradient(circle,rgba(56, 189, 248, 0.05) 0%,transparent 65%)">
+    </div>
+    <div class="container">
+      <div class="timeline-header reveal">
+        <div class="tag">My Journey</div>
+        <h2 class="section-title" style="margin-top:20px">
+          The path so<br>
+          <span class="gradient-text">far & ahead.</span>
+        </h2>
+      </div>
+
+      <div class="timeline-track">
+        <div class="timeline-line"></div>
+
+        <!-- Item 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-left">
+            <div class="tl-card">
+              <div class="tl-period">Pre-College Years</div>
+              <div class="tl-title">DAV Public School</div>
+              <p class="tl-desc">Attended DAV Public School in Koyla Nagar, Dhanbad from nursery all the way through
+                12th grade.</p>
+              <span class="tl-status done">✓ Done</span>
+            </div>
+          </div>
+          <div class="timeline-center">
+            <div class="timeline-node done"></div>
+          </div>
+          <div class="timeline-right"></div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item reveal" style="transition-delay:.1s">
+          <div class="timeline-left"></div>
+          <div class="timeline-center">
+            <div class="timeline-node done"></div>
+          </div>
+          <div class="timeline-right">
+            <div class="tl-card">
+              <div class="tl-period">First Semester</div>
+              <div class="tl-title">Joined GBU</div>
+              <p class="tl-desc">Started my B.Tech in ICT at Gautam Buddha University and started my journey in the
+                world of technology.</p>
+              <span class="tl-status done">✓ Done</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 — Active -->
+        <div class="timeline-item reveal" style="transition-delay:.2s">
+          <div class="timeline-left">
+            <div class="tl-card" style="border-color:rgba(129, 140, 248, 0.3)">
+              <div class="tl-period">May 2026</div>
+              <div class="tl-title">2nd Semester Exams</div>
+              <p class="tl-desc">Wrapping up my second semester exams while preparing for the next phase of my academic
+                journey and getting my skills ready for internships and job opportunities.
+              </p>
+              <span class="tl-status active">⚡ In Progress</span>
+            </div>
+          </div>
+          <div class="timeline-center">
+            <div class="timeline-node active"></div>
+          </div>
+          <div class="timeline-right"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+     CONTACT
+──────────────────────────────────────────────────────────── -->
+  <section id="contact">
+    <div class="orb contact-orb"></div>
+    <div class="container">
+      <div class="contact-inner reveal">
+        <div class="tag">Get In Touch</div>
+        <h2 class="section-title" style="margin-bottom:20px">
+          Let's build something<br>
+          <span class="gradient-text">extraordinary.</span>
+        </h2>
+        <p class="contact-sub">
+          Whether you want to discuss AI integrations, debate chess openings, or talk about Website deployment, my inbox
+          is always open.
+        </p>
+
+        <div class="contact-cards">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekkrmay30@gmail.com" class="contact-card">
+            <div class="contact-card-icon" style="background:rgba(56, 189, 248, 0.1)"><i class="fas fa-envelope"></i>
+            </div>
+            <span>abhishekkrmay30@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/abhishek-kumar-30may2007/" target="_blank" class="contact-card">
+            <div class="contact-card-icon" style="background:rgba(129, 140, 248, 0.1)"><i class="fab fa-linkedin"></i>
+            </div>
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="https://github.com/abhishekkumar-code30" target="_blank" class="contact-card">
+            <div class="contact-card-icon" style="background:rgba(244, 114, 182, 0.1)"><i class="fab fa-github"></i>
+            </div>
+            <span>GitHub Profile</span>
+          </a>
+        </div>
+
+        <div class="contact-cta-group">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekkrmay30@gmail.com" class="btn-hero-primary">
+            <span><i class="fas fa-paper-plane"></i></span>
+            <span>Send a Message</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1pVAP9OiFpZ3lahVlSCoCIN0JMB3Y9UWc/view?usp=sharing"
+            class="btn-hero-secondary" download>
+            <span><i class="fas fa-download"></i></span>
+            <span>Download Resume</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────
+     FOOTER
+──────────────────────────────────────────────────────────── -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <div class="nav-logo-icon">&lt;/&gt;</div>
+          BuildWithAbhi
+        </div>
+        <p class="footer-copy">Crafted with 💙 by Abhishek Kumar — 2026</p>
+        <div class="footer-socials">
+          <a href="https://github.com/abhishekkumar-code30" target="_blank" class="footer-social" title="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/abhishek-kumar-30may2007/" target="_blank" class="footer-social"
+            title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhishekkrmay30@gmail.com" class="footer-social"
+            title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
 </body>
 
 </html>
