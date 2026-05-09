@@ -144,20 +144,20 @@ if (statsEl) counterObserver.observe(statsEl);
 
 /* ── TICKER ────────────────────────────────────────────── */
 const tickerItems = [
-  "☕ Java",
-  "🐍 Python",
-  "🚀 FastAPI",
-  "🟢 Node.js",
-  "🤖 AI Agents",
-  "🦙 Ollama",
-  "🗄️ MySQL",
-  "🌿 Git",
-  "🐙 GitHub",
-  "🔌 Arduino",
-  "📡 IoT Systems",
-  "🔗 REST APIs",
-  "🧩 DSA",
-  "💡 Open Source",
+  '<i class="fab fa-java" style="color: #f89820;"></i> Java',          /* Orange */
+  '<i class="fab fa-python" style="color: #3776ab;"></i> Python',      /* Python Blue */
+  '<i class="fas fa-bolt" style="color: #009688;"></i> FastAPI',       /* Teal */
+  '<i class="fab fa-node-js" style="color: #68a063;"></i> Node.js',    /* Node Green */
+  '<i class="fas fa-robot" style="color: #8b5cf6;"></i> AI Agents',    /* Purple */
+  '<i class="fas fa-brain" style="color: #ec4899;"></i> Ollama',       /* Pink */
+  '<i class="fas fa-database" style="color: #00758f;"></i> MySQL',     /* MySQL Blue */
+  '<i class="fab fa-git-alt" style="color: #f34f29;"></i> Git',        /* Git Orange */
+  '<i class="fab fa-github" style="color: #ffffff;"></i> GitHub',      /* White (or black depending on background) */
+  '<i class="fas fa-microchip" style="color: #00979d;"></i> Arduino',  /* Arduino Teal */
+  '<i class="fas fa-network-wired" style="color: #3b82f6;"></i> IoT Systems', 
+  '<i class="fas fa-plug" style="color: #10b981;"></i> REST APIs',     
+  '<i class="fas fa-project-diagram" style="color: #f59e0b;"></i> DSA',
+  '<i class="fab fa-osi" style="color: #4ade80;"></i> Open Source',
 ];
 const ticker = document.getElementById("ticker");
 const doubled = [...tickerItems, ...tickerItems];
